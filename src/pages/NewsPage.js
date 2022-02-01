@@ -12,11 +12,10 @@ const NewsPage = () => {
   const fetchNews = async () => {
     const { data } = await axios.get(News(), { headers });
     setNews(data);
-    //     console.log(data.value);
   };
 
   const all = news?.value;
-  console.log(news?.value[0]);
+
   useEffect(() => {
     fetchNews();
   }, []);
@@ -62,7 +61,6 @@ const NewsPage = () => {
                     paddingRight: 10,
                     fontFamily: "montserrat",
                     fontWeight: "600",
-                    // textAlign: "justify",
                     color: "#E2FF00",
                   }}
                 >
@@ -72,7 +70,6 @@ const NewsPage = () => {
                   style={{
                     padding: 10,
                     paddingRight: 10,
-                    // textAlign: "justify",
                     fontFamily: "montserrat",
                     color: "darkgrey",
                     fontSize: "small",

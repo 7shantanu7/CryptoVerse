@@ -18,7 +18,6 @@ export const headers = {
   "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
   "x-rapidapi-key": process.env.REACT_APP_API_KEY,
 };
-console.log(process.env.REACT_APP_KEY);
-console.log("we");
+
 export const News = () =>
   "https://bing-news-search1.p.rapidapi.com/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=40";
