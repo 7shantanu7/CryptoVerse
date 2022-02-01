@@ -12,11 +12,13 @@ export const TrendingCoins = (currency) =>
   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`;
 
 // News API
+
 export const headers = {
   "x-bingapis-sdk": "true",
   "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-  "x-rapidapi-key": "3d5f39087dmshf92601db1771d02p1b3cc2jsnc59406f2394f",
+  "x-rapidapi-key": process.env.REACT_APP_API_KEY,
 };
-
+console.log(process.env.REACT_APP_KEY);
+console.log("we");
 export const News = () =>
   "https://bing-news-search1.p.rapidapi.com/news/search?q=cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=40";
